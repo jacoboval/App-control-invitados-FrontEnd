@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es-419">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <title>Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Barlow:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap" rel="stylesheet">
+
+</head>
+
+<!-- formulario -->
+<section class="py-4 container">
+    <div class="row">
+        <div class="col-10 col-xl-8 mx-auto">
+            <div class="border border-2 rounded p-3">
+                <h3 class="fw-bold p-3">Crear Lista de Invitados</h3>
+                <form id="form-crear-lista-invitados">
+                    <div class="form-floating mb-3">
+                        <input type="text" id="nombreinvitado" class="form-control" >
+                        <label>Nombre</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="number" class="form-control" id="acompanantesinvitado" >
+                        <label>Acompañantes</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="number" id="telefonoinvitado" class="form-control">
+                        <label>Telefono</label>
+                    </div>
+                    
+                    <button type="submit"
+                        class="btn boton-estandar w-100  itinerario_lora fw-bold mt-3 py-3 ">Crear Invitados</button>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</section><!-- fin formulario -->
+</section>
+<div id="msg-success" class="alert alert-success d-none mt-3">
+    Invitado creado correctamente ✔
+</div>
+
+<div id="msg-error" class="alert alert-danger d-none mt-3">
+    Hubo un error al crear el invitado ❌
+</div>
+<script src="./js/crearListaInvitados.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Invitación Especial</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+    margin:0;
+    font-family:'Poppins', sans-serif;
+    background: radial-gradient(circle, #1a1a1a, #000);
+    color:white;
+    text-align:center;
+    overflow-x:hidden;
+}
+
+/* ✨ PARTÍCULAS */
+body::before{
+    content:"";
+    position:fixed;
+    width:100%;
+    height:100%;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png');
+    opacity:0.2;
+    animation: move 20s linear infinite;
+}
+
+@keyframes move{
+    from{background-position:0 0;}
+    to{background-position:1000px 1000px;}
+}
+
+/* CONTENEDOR */
+.container{
+    padding:40px 20px;
+}
+
+/* NOMBRE */
+.nombre{
+    font-family:'Playfair Display', serif;
+    font-size:48px;
+    color:gold;
+    animation: fadeIn 2s ease;
+}
+
+/* MENSAJE */
+.mensaje{
+    margin-top:10px;
+    font-size:18px;
+    opacity:0.8;
+}
+
+/* TARJETA */
+.card{
+    margin-top:30px;
+    background:rgba(255,255,255,0.05);
+    padding:30px;
+    border-radius:15px;
+    backdrop-filter: blur(10px);
+    box-shadow:0 0 30px rgba(255,215,0,0.2);
+}
+
+/* BOTÓN */
+button{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    border-radius:25px;
+    background:linear-gradient(45deg, gold, orange);
+    color:black;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="nombre" id="nombre">Invitado</div>
+
+    <div class="mensaje">
+        Te invitamos a celebrar este momento especial
+    </div>
+
+    <div class="card">
+
+        <p>📅 Fecha: 20 de Abril</p>
+        <p>📍 Lugar: Salón Jardín</p>
+
+        <button onclick="confirmar()">Confirmar asistencia</button>
+
+    </div>
+
+</div>
+
+<script>
+
+// 🔥 obtener token
+const params = new URLSearchParams(window.location.search);
+const token = params.get("t");
+
+// 👤 cargar invitado
+async function cargar(){
+
+    const res = await fetch("http://localhost:8083/invitado?token=" + token);
+    const data = await res.json();
+
+    document.getElementById("nombre").innerText = data.nombre;
+}
+
+cargar();
+
+// ✅ confirmar
+async function confirmar(){
+
+    await fetch("http://localhost:8083/confirmar?token=" + token, {
+        method:"POST"
+    });
+
+    alert("Asistencia confirmada 🎉");
+
+}
+
+</script>
+
+</body>
+</html>

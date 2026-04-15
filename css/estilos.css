@@ -1,0 +1,771 @@
+body {
+  --bege: #E6E0D6;
+  --cafe-oscuro: #816D4F;
+  --cafe-claro: #B29463;
+  font-family: 'Barlow', sans-serif;
+  /*height: 4000px;*/
+  min-height: 100vh;
+
+}
+.banner-1{
+  background-image: url(../images/heart1.jpg);
+}
+.banner-2 {
+  background-image: url(../images/heart2.jpg);
+}
+
+.banner-3{
+  background-image: url(../images/heart3.jpg);
+}
+
+.banner-4{
+  background-image: url(../images/heart4.jpg);
+}
+.banner-5 {
+  background-image: url(../images/heart5.jpg);
+}
+.banner-footer {
+  background-image: url(../images/ladrillos_gold.jpg);
+}
+
+
+.banners_main {
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  /* necesario para overlay */
+  position: relative;
+  display: flex;
+}
+.banners_main::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  /* ← AQUÍ controlas transparencia */
+  background: rgba(0, 0, 0, 0.45);
+
+  z-index: 1;
+}
+.banners_main > * {
+  position: relative;
+  z-index: 2;
+}
+
+/*banner 2 - con Datos invitado*/
+.banners_datos_invitado {
+  width: 100%;
+  height: 95vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  /* necesario para overlay */
+  position: relative;
+  display: flex;
+}
+.banners_datos_invitado::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  /* ← AQUÍ controlas transparencia */
+  background: rgba(0, 0, 0, 0.45);
+
+  z-index: 1;
+}
+.banners_datos_invitado > * {
+  position: relative;
+  z-index: 2;
+}
+
+
+
+.banners-mensajes {
+  width: 100%;
+  height: 20vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  /* necesario para overlay */
+  position: relative;
+  display: flex;
+}
+.banners-mensajes::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  /* ← AQUÍ controlas transparencia */
+  background: rgba(0, 0, 0, 0.45);
+
+  z-index: 1;
+}
+.banners-mensajes > * {
+  position: relative;
+  z-index: 2;
+}
+
+/**/
+.banners-datos-invitado {
+  width: 100%;
+  height: 80vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  /* necesario para overlay */
+  position: relative;
+  display: flex;
+}
+.banners-datos-invitado::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  /* ← AQUÍ controlas transparencia */
+  background: rgba(0, 0, 0, 0.45);
+
+  z-index: 1;
+}
+.banners-datos-invitado > * {
+  position: relative;
+  z-index: 2;
+}
+/**/
+.banners-itinerario {
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  /* necesario para overlay */
+  position: relative;
+  display: flex;
+}
+.banners-itinerario::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  /* ← AQUÍ controlas transparencia */
+  background: rgba(0, 0, 0, 0.45);
+
+  z-index: 1;
+}
+.banners-itinerario > * {
+  position: relative;
+  z-index: 2;
+}
+/**/
+.banners-ubicacion {
+  width: 100%;
+  height: 130vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  /* necesario para overlay */
+  position: relative;
+  display: flex;
+}
+.banners-ubicacion::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  /* ← AQUÍ controlas transparencia */
+  background: rgba(0, 0, 0, 0.45);
+
+  z-index: 1;
+}
+.banners-ubicacion > * {
+  position: relative;
+  z-index: 2;
+}
+/**/
+
+
+
+
+
+
+.banners {
+  width: 100%;
+  height: 40vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  
+  /* efecto parallax*/
+  background-attachment: fixed;
+}
+
+.box-card {
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.1);
+    border: 1px solid var(--primary);
+    border-radius: 20px;
+    padding: 15px 20px;
+    min-width: 70px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(255,111,177,0.6);
+    
+}
+.box-card-text  {
+  font-family: "MonteCarlo", cursive;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.3em;
+  letter-spacing: 0px;
+  color: #ff9acb;
+  font-size: 40px;
+}
+.text-card2  {
+  font-family: "MonteCarlo", cursive;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.3em;
+  letter-spacing: 0px;
+  color: #ffffff;
+  font-size: 30px;
+}
+
+.banners_footer {
+  width: 100%;
+  height: 15vh;
+  color: #000000;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  
+  /* efecto parallax*/
+  background-attachment: fixed;
+}
+
+
+.banners-titulo {
+  --bs-bg-opacity:.4;
+  font-family:'Times New Roman', Times, serif;
+  /*opacity: .3;*/
+}
+.banners-titulo-myparty {
+  --bs-bg-opacity:.2;
+  font-family:'Times New Roman', Times, serif;
+  /*opacity: .3;*/
+}
+
+input[type=checkbox] {
+  border: 2px solid var(--cafe-claro);
+  box-shadow: none;
+}
+
+input[type=checkbox]:checked, input[type=checkbox]:focus {
+  background-color: var(--cafe-claro);
+  border-color: var(--cafe-claro);
+  box-shadow: none;
+  outline: none;
+}
+.boton-estandar{
+  color: #E6E0D6;
+  background-color: #25CC64;
+    
+}
+
+.boton-estandar:hover{
+  color: #E6E0D6;
+  background-color:#198754;
+}
+.form-range::-webkit-slider-thumb,
+footer {
+  color: aliceblue;
+  background-color: #dea7aa;
+}
+
+[data-bs-theme="dark"] {
+  color: white;
+
+  .nav-link,
+  .card-body,
+  .offcanvas,
+  .accordion,
+  .btn {
+    --bs-nav-link-color: white;
+    --bs-card-color: white;
+    --bs-offcanvas-color: white;
+    --bs-accordion-color: white;
+    --bs-btn-color: white;
+  }
+}
+.montecarlo-regular {
+  font-family: "MonteCarlo", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 100px;
+  line-height: 1.3em;
+  letter-spacing: 0px;
+  color: #191919;
+  font-size: 30px;
+}
+.reloj-montecarlo-regular  {
+  font-family: "MonteCarlo", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 100px;
+  line-height: 1.3em;
+  letter-spacing: 0px;
+  color: #ff9acb;
+  font-size: 30px;
+}
+.confirmar-montecarlo-regular {
+  font-family: "MonteCarlo", cursive;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.3em;
+  letter-spacing: 0px;
+  color: #191919;
+  font-size: 30px;
+  
+}
+
+
+.lora-type {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+   font-size: 50px;
+  font-weight: 500;
+  font-style: italic;
+}
+.lora-type2 {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-size: 30px;
+  font-weight: 500;
+  font-style: italic;
+  
+}
+
+.itinerario_lora{
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: italic;
+  color: #191919;
+
+}
+.nota-pases{
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: italic;
+  color: #ff9acb;
+
+}
+.confirmar_lora{
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: italic;
+   color: #191919;
+
+}
+
+
+div.gallery {
+  border: .5px solid #ccc;
+}
+
+div.gallery:hover {
+  border: .5px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 0;
+  float: left;
+  width: 23.99999%;
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 29.99999%;
+    margin: 3% 0;
+  }
+}
+
+@media(min-width:768px) {
+  .div-novedades {
+    width: 696px;
+  }
+}
+
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.contenedor-flexbox {
+  display: flex;
+  /*Convertimos al menú en flexbox*/
+  justify-content: space-between;
+  /*Con esto le indicamos que margine todos los items que se encuentra adentro hacia la derecha e izquierda*/
+  align-items: center;
+  /*con esto alineamos de manera vertical*/
+}
+
+/* GALERÍA COLLAGE  */
+#galeria-rosa {
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ffd1e8, #ff9acb);
+  padding: 30px 0;
+}
+
+.galeria-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: scrollGaleria 30s linear infinite;
+}
+
+.galeria-item {
+  width: 110px;
+  height: 210px;
+  border-radius: 22px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 20px 40px rgba(255, 20, 147, 0.35);
+  transition: transform 0.4s ease;
+}
+
+.galeria-item:hover {
+  transform: scale(1.08);
+}
+
+@keyframes scrollGaleria {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .galeria-item {
+    width: 170px;
+    height: 250px;
+  }
+}
+
+.galeria-item {
+  position: relative;
+}
+
+.galeria-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255,154,203,0.45),
+    rgba(255,105,180,0.25)
+  );
+  border-radius: 22px;
+}
+
+
+  /*  para el texto**/
+.texto-xv {
+  font-family: 'MonteCarlo', cursive;
+  font-size: 3.7 rem;
+  text-align: center;
+  color: #FFFFFF;
+  letter-spacing: 1px;
+  opacity: 0;
+  animation: aparecerBrillo 2.5s ease forwards;
+}
+
+@keyframes aparecerBrillo {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    text-shadow: none;
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    text-shadow: 0 0 10px rgba(255,111,177,0.6);
+  }
+  100% {
+    opacity: 1;
+    text-shadow:
+      0 0 8px rgba(255,111,177,0.6),
+      0 0 16px rgba(255,154,203,0.4);
+  }
+}
+
+/*fin para el texto nombre quinceañera*/
+.texto-name_q {
+  font-family: 'MonteCarlo', cursive;
+  font-size: 3.5rem;
+  text-align: center;
+
+  color: #e72a7f;
+  letter-spacing: 2px;
+  opacity: 0;
+  animation: aparecerBrillo 2.5s ease forwards;
+}
+
+@keyframes aparecerBrillo {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    text-shadow: none;
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    text-shadow: 0 0 10px rgba(255,111,177,0.6);
+  }
+  100% {
+    opacity: 1;
+    text-shadow:
+      0 0 8px rgba(255,111,177,0.6),
+      0 0 16px rgba(255,154,203,0.4);
+  }
+}
+
+/*fin para el nombre quinceañera*/
+
+/* texto tipeado*/
+/*.texto-xv-typing {
+  font-family: 'MonteCarlo', cursive;
+  font-size: 3.8rem;
+  text-align: center;
+  color: #ff4fa3;
+  letter-spacing: 3px;
+}*/
+
+.texto-xv-typing span {
+  opacity: 0;
+  display: inline-block;
+  transform: translateY(20px);
+
+  animation: letraAparece 0.45s ease forwards;
+  animation-delay: calc(var(--i) * 0.12s);
+}
+
+.texto-xv-typing span {
+  opacity: 0;
+  display: inline-block;
+  transform: translateY(20px);
+  animation: letraAparece 0.5s ease forwards;
+}
+
+/* retraso progresivo */
+.texto-xv-typing span:nth-child(1)  { animation-delay: 0.1s; }
+.texto-xv-typing span:nth-child(2)  { animation-delay: 0.2s; }
+.texto-xv-typing span:nth-child(3)  { animation-delay: 0.3s; }
+.texto-xv-typing span:nth-child(4)  { animation-delay: 0.4s; }
+.texto-xv-typing span:nth-child(5)  { animation-delay: 0.5s; }
+.texto-xv-typing span:nth-child(6)  { animation-delay: 0.6s; }
+.texto-xv-typing span:nth-child(7)  { animation-delay: 0.7s; }
+.texto-xv-typing span:nth-child(8)  { animation-delay: 0.8s; }
+.texto-xv-typing span:nth-child(9)  { animation-delay: 0.9s; }
+.texto-xv-typing span:nth-child(10) { animation-delay: 1.0s; }
+.texto-xv-typing span:nth-child(11) { animation-delay: 1.1s; }
+
+@keyframes letraAparece {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .texto-xv-typing {
+    font-size: 2.6rem;
+  }
+}
+
+/* para texrtos mas largos*/
+
+.texto-xv-typing {
+  font-family: 'MonteCarlo', cursive;
+  font-size: 3 rem;
+  text-align: center;
+  color: #FFFFFF;
+  /*letter-spacing: 1px;*/
+    /*letter-spacing: 1px;*/
+
+  animation: brilloFinal 1.2s ease forwards;
+  animation-delay: calc(var(--total) * 0.12s);
+}
+
+.texto-xv-typing span {
+  opacity: 0;
+  display: inline-block;
+  transform: translateY(20px);
+  animation: letraAparece 0.45s ease forwards;
+  animation-delay: calc(var(--i) * 0.12s);
+}
+
+@keyframes letraAparece {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes brilloFinal {
+  to {
+    text-shadow:
+      0 0 6px rgba(255,79,163,0.5),
+      0 0 14px rgba(255,154,203,0.4);
+  }
+}
+/*  esrilo para cards
+.tarjeta-apreciable {
+  background: linear-gradient(
+    135deg,
+    #f9c5d1,
+    #fbc2eb,
+    #fddde6
+  );
+  border: none;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(233, 150, 190, 0.35);
+}
+
+/* texto */
+.tarjeta-cards {
+  background: linear-gradient(
+    135deg,
+    #f9c5d1,
+    #fbc2eb,
+    #fddde6
+  );
+  border: none;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(233, 150, 190, 0.35);
+}
+
+/* texto */
+.tarjeta-apreciable h2,
+.tarjeta-apreciable p {
+  color: #5a2a3a;
+}
+
+.tarjeta-apreciable {
+  background: linear-gradient(
+    135deg,
+    rgba(249,197,209,0.85),
+    rgba(251,194,235,0.85)
+  );
+  backdrop-filter: blur(6px);
+}
+
+/*  reloj retrocedso  */
+
+/* VARIABLES EDITABLES */
+:root {
+    --countdown-bg: rgba(255,255,255,0.1);
+    --countdown-border: var(--primary);
+    --countdown-text: var(--primary);
+    --countdown-font: 'Poppins', sans-serif;
+}
+
+/* CONTENEDOR */
+.countdown-container {
+  
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+/* CAJAS */
+.time-box {
+    backdrop-filter: blur(10px);
+    background: var(--countdown-bg);
+    border: 1px solid var(--countdown-border);
+    border-radius: 20px;
+    padding: 15px 15px;
+    min-width: 70px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(255,111,177,0.6);
+}
+
+/* NÚMEROS */
+.time-box span {
+    font-size: 1.3
+    rem;
+    font-weight: bold;
+    color: var(--countdown-text);
+    font-family: var(--countdown-font);
+    
+}
+
+/* TEXTO */
+.time-box small {
+    display: block;
+    font-size: .8em;
+    color: var(--countdown-text);
+    opacity: 0.7;
+}
+
+/* RESPONSIVE */
+@media (min-width: 768px) {
+    .time-box span {
+        font-size: 2.5rem;
+    }
+}
+/* fin reloj retroceso */
+
+
+
+.texto-xv_grande {
+    text-align: center;
+    font-family: "Gabriela", Sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+    text-shadow: 2px 0px 2px #000000;
+    color: #FFFFFF;
+}
+.texto-xv-chico  {
+    text-align: center;
+    font-family: "Gabriela", Sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    text-shadow: 2px 0px 2px #000000;
+    color: #FFFFFF;
+}
+

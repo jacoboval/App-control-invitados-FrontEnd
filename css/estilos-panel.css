@@ -1,0 +1,228 @@
+body {
+  --bege: #E6E0D6;
+  --cafe-oscuro: #816D4F;
+  --cafe-claro: #B29463;
+  font-family: 'Barlow', sans-serif;
+  /*height: 4000px;*/
+  min-height: 100vh;
+
+}
+
+.banners_main {
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  
+  /* efecto parallax*/
+  background-attachment: fixed;
+}
+.banners {
+  width: 100%;
+  height: 30vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  
+  /* efecto parallax*/
+  background-attachment: fixed;
+}
+.banners_footer {
+  width: 100%;
+  height: 20vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  
+  /* efecto parallax*/
+  background-attachment: fixed;
+}
+
+input[type=checkbox] {
+  border: 2px solid var(--cafe-claro);
+  box-shadow: none;
+}
+
+input[type=checkbox]:checked, input[type=checkbox]:focus {
+  background-color: var(--cafe-claro);
+  border-color: var(--cafe-claro);
+  box-shadow: none;
+  outline: none;
+}
+.boton-estandar{
+  color: #E6E0D6;
+  background-color: #25CC64;
+    
+}
+.boton-estandar-panel {
+  color: #E6E0D6;
+}
+
+
+.boton-estandar:hover{
+  color: #E6E0D6;
+  background-color:#198754;
+}
+.form-range::-webkit-slider-thumb,
+footer {
+  color: aliceblue;
+  background-color: #dea7aa;
+}
+
+.montecarlo-regular {
+  font-family: "MonteCarlo", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 100px;
+  line-height: 1.3em;
+  letter-spacing: 0px;
+  color: #191919;
+  font-size: 30px;
+}
+.confirmar-montecarlo-regular {
+  font-family: "MonteCarlo", cursive;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.3em;
+  letter-spacing: 0px;
+  color: #191919;
+  font-size: 30px;
+  
+}
+
+
+.lora-type {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+   font-size: 50px;
+  font-weight: 500;
+  font-style: italic;
+}
+.lora-type2 {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-size: 30px;
+  font-weight: 500;
+  font-style: italic;
+  
+}
+
+.itinerario_lora{
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: italic;
+  color: #191919;
+
+}
+.confirmar_lora{
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: italic;
+   color: #191919;
+
+}
+
+
+div.gallery {
+  border: .5px solid #ccc;
+}
+
+div.gallery:hover {
+  border: .5px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 0;
+  float: left;
+  width: 23.99999%;
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 29.99999%;
+    margin: 3% 0;
+  }
+}
+
+@media(min-width:768px) {
+  .div-novedades {
+    width: 696px;
+  }
+}
+
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.contenedor-flexbox {
+  display: flex;
+  /*Convertimos al menú en flexbox*/
+  justify-content: space-between;
+  /*Con esto le indicamos que margine todos los items que se encuentra adentro hacia la derecha e izquierda*/
+  align-items: center;
+  /*con esto alineamos de manera vertical*/
+}
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#1e3c72;
+    color:white;
+    padding:15px 25px;
+    margin-bottom:20px;
+}
+
+.logo-area{
+    font-weight:bold;
+    font-size:18px;
+}
+
+.user-area{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.user-area button{
+    background:#ff4d4d;
+    border:none;
+    color:white;
+    padding:6px 12px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.user-area button:hover{
+    background:#cc0000;
+}
+
+.card{
+    border-radius:12px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
