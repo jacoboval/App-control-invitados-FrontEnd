@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8083";
+const API_URL = "https://app-control-invitados-backend.onrender.com";
 const token = localStorage.getItem("token");
 
 document.getElementById("form-crear-lista-invitados").addEventListener("submit", async function (e) {
