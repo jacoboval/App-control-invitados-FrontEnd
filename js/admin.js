@@ -5,12 +5,12 @@ const API_URL = "https://app-control-invitados-backend.onrender.com";
 const token = localStorage.getItem("token");
 
 async function cargarInvitados() {
-    /*const response = await fetch(`${API_URL}/admin/listarInvitados`, {
+    const response = await fetch(`${API_URL}/admin/listarInvitados`, {
         headers: {
             "Authorization": "Bearer " + token
         }
-    });/*/
-    const response = await fetch(`${API_URL}/admin/listarInvitados`);
+    });
+    //const response = await fetch(`${API_URL}/admin/listarInvitados`);
     const invitados = await response.json();
 
     // Dashboard
