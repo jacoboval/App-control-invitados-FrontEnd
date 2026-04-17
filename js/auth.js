@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8081";
+const API_URL = "https://app-control-invitados-backend.onrender.com";
 
 document.getElementById("loginForm")
     .addEventListener("submit", async function (e) {
