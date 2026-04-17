@@ -1,4 +1,5 @@
-const API_URL = "https://app-control-invitados-backend.onrender.com";                 
+const API_URL = "https://app-control-invitados-backend.onrender.com"; 
+//const API_URL = "http://localhost:8081";                 
 const TOKEN_STORAGE_KEY = 'invitation_token';
 const params = new URLSearchParams(window.location.search);
 const token = params.get("t");
