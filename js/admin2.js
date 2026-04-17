@@ -1,25 +1,18 @@
-//const API_URL = "https://control-invitadosbackend.onrender.com";
-const API_URL = "https://app-control-invitados-backend.onrender.com";
-                  
-//const API_URL = "http://localhost:8081";
-const token = localStorage.getItem("token");
+const API_URL = "https://control-invitadosbackend.onrender.com";
+
+
 
 async function cargarInvitados() {
-    /*const response = await fetch(`${API_URL}/admin/listarInvitados`, {
-        headers: {
-            "Authorization": "Bearer " + token
-        }
-    });/*/
     const response = await fetch(`${API_URL}/admin/listarInvitados`);
     const invitados = await response.json();
 
     // Dashboard
     /*
     document.getElementById("dash-total").innerText = invitados.length;
-    document.getEleymentById("dash-confirmados").innerText = invitados.filter(i => i.confirmado).length;
+    document.getElementById("dash-confirmados").innerText = invitados.filter(i => i.confirmado).length;
     document.getElementById("dash-pendientes").innerText = invitados.filter(i => !i.confirmado).length;
      */
-
+    
     /**  update 27/01/2026**/
 
     // ===== PERSONAS =====
@@ -54,11 +47,6 @@ async function cargarInvitados() {
     document.getElementById("dash-pases-disponibles").innerText = pasesDisponibles;
     document.getElementById("dash-pases-disponibilidad").innerText = pasesDisponibilidad;
     document.getElementById("dash-pases-sin-asignar").innerText = pasesSinAsignar;
-
-    // 🔥 COLOR DINÁMICO
-    if (pasesSinAsignar < 0) {
-        document.getElementById("dash-pases-sin-asignar").style.color = "red";
-    }
 
     /** * end update */
     const tabla = document.getElementById("tabla-invitados");
@@ -96,22 +84,14 @@ async function cargarInvitados() {
 
 /* COPIAR ENLACE */
 function copiarEnlace(token) {
-    const url = `http://localhost:8083/index.html?t=${token}`;
+    const url = `https://control-invitados-mis-xv.onrender.com//index.html?t=${token}`;
     navigator.clipboard.writeText(url);
-    //alert("Enlace copiado:\n" + url);
-    navigator.clipboard.writeText(url);
-
-    const btn = event.target.closest("button");
-    btn.innerHTML = "✔️";
-
-    setTimeout(() => {
-        btn.innerHTML = '<i class="bi bi-link-45deg"></i>';
-    }, 1500);
+    alert("Enlace copiado:\n" + url);
 }
 
 /* ENVIAR WHATSAPP */
 function enviarWhatsapp(nombre, token) {
-    const url = `http://localhost:8083/index.html?t=${token}`;
+    const url = `https://control-invitados-mis-xv.onrender.com//index.html?t=${token}`;
     const mensaje = `Hola ${nombre}, te compartimos tu invitación:\n${url}`;
     window.open(`https://wa.me/?text=${encodeURIComponent(mensaje)}`, "_blank");
 }
@@ -127,13 +107,8 @@ async function regenerarToken(id) {
 
 /* EXPORTAR A EXCEL */
 document.getElementById("btn-exportar").addEventListener("click", async () => {
-    //const response = await fetch(`http://localhost:8083/admin/listarInvitados`);
-    const response = await fetch(`${API_URL}/admin/listarInvitados`, {
-        headers: {
-            "Authorization": "Bearer " + token
-        }
-    });
-
+    const response = await fetch(`https://control-invitadosbackend.onrender.com/admin/listarInvitados`);
+                                  
     const invitados = await response.json();
 
     let csv = "Nombre,Pases,Confirmado,Token\n";
